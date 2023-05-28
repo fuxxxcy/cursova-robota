@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Lato;
+  src: url(./assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+@keyframes modal-content-appear {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+:root {
+  --background-color: #effeff;
+  --workspace-primarly-color: #FFFFFF;
+  --workspace-secondary-color: #25259d;
+  --workspace-thirdly-color: #c5c5c5;
+  --workspace-gradient: linear-gradient(-30deg, #25259d, #c545ce 35% 65%, #25259d);
+  --text-color: #000000;
+  --text-active-color: #ffffff;
+
+  --sidebar-width: 220px;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: Lato;
+  font-size: 12px;
+}
+
+body {
+  width: 100%;
+  min-width: max-content;
+  height: max-content;
+  margin: 0px;
+}
+
+.App {
+  position: relative;
+  min-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 24px;
+}
+.nav-link:is(:hover, :active) {
+  color: var(--text-active-color);
+}
+
+.gradient-link {
+  text-decoration: none;
+  background-image: var(--link-gradient);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 3px;
+  transition: background-size 0.5s ease-in-out;
+  font-weight: 800;
+}
+a {
+  color: inherit;
+}
+
+.gradient-link:where(:hover, :focus) {
+  background-size: 100% 3px;
+  color: inherit;
+  outline: none;
+}

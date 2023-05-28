@@ -1,0 +1,73 @@
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.table {
+    width: 100%;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+.table-row, .table-title {
+    box-sizing: border-box;
+    min-height: 50px;
+    height: fit-content;
+    margin: 0 30px;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #00980F;
+    font-size: 8px;
+}
+
+.table-title {
+    width: 100% !important;
+    margin: 10px 0px 0px !important;
+    padding: 0 30px 5px;
+    
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--workspace-thirdly-color);
+}
+
+.table-row > div, .table-title > div {
+    height: fit-content;
+    margin: 10px;
+}
+
+.table-end {
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+    margin: 10px 20px;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--auxiliary-elements-color);
+}
+
+.add-button {
+    box-sizing: border-box;
+    width: fit-content;
+    height: auto;
+    padding: 8px;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: normal;
+    color: var(--text-color);
+    border: 1px solid var(--workspace-thirdly-color);
+}
+.add-button:where(:hover, :focus) {
+    color: var(--text-active-color);
+    background: var(--workspace-gradient);
+    border: 1px solid transparent;
+}
